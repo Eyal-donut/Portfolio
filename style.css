@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300;400&family=Roboto+Mono&display=swap');
+:root {
+    --bg-color: #FFFFFF;
+    --content-sec-color:#808080;
+}
 
 /* Reset */
 
@@ -15,7 +19,13 @@ html, body {
     width: 100vw;
     color: black;
     font-size: 62.5%;
+    letter-spacing: 0.4rem;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Utility Classes */
 
 h1 {
@@ -39,3 +49,35 @@ h4 {
     font-weight: 700;
 }
 
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+    background: url(/Assets/images/hero_02.png) no-repeat center center/cover;
+}
+.hero * {
+    z-index: 1;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1));
+    /* opacity: 99.9%; */
+    z-index: 0;
+
+
+}
+
+.bigdiv {
+    background-color: #FFFFFF;
+    height: 1000px;
+}
