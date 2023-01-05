@@ -1,12 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300;400&family=Roboto+Mono&display=swap');
 
+
+
+
 /* Reset */
 
 *{
     padding: 0;
     margin: 0;
     box-sizing:border-box;
+
 }
-body {
+html, body {
     font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    font-size: 62.5%;
 }
+/* Utility Classes */
+
+h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.9rem;
+    line-height: 2.9rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 700;
+}
+h4 {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    font-weight: 700;
+}
+
