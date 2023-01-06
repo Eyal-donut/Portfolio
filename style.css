@@ -2,7 +2,8 @@
 :root {
     --bg-color: #FFFFFF;
     --content-sec-color:#808080;
-    --main-speed: 0.2s;    
+    --main-speed: 0.2s;
+    --little-space:0.2rem;    
 
 }
 
@@ -34,6 +35,7 @@ a {
 }
 p {
     font-size: 1.7rem;
+    letter-spacing: var(--little-space);
 }
 
 /* Utility Classes */
@@ -44,7 +46,7 @@ h4 {
     line-height: 1.9rem;
 
 }
-h1, h2, h3  {
+h1, h2, h3,h6  {
     letter-spacing: 0.5rem;
     text-transform: uppercase;
 
@@ -68,6 +70,12 @@ h3 {
     font-weight: 700;
 }
 
+/* h6 {
+    font-size:2.4rem;
+    line-height: 2.9rem;
+    font-weight: 400;
+    margin:  0;
+} */
 
 .container {
     display: flex;
@@ -79,7 +87,7 @@ h3 {
 #selected-projects-header.container {
     height: 15vh;
     width: 100vw;
-    margin: 2vh 0;
+    margin: 4vh 0;
 }
 
 .section-container {
@@ -228,7 +236,7 @@ h3 {
     width: 12%;
     height: 15%;
     /* border: red 0.1rem solid; */
-    letter-spacing: 0.2rem;
+    letter-spacing: var(--little-space);
 }
 
 #project2.container.projects-container > div:nth-child(1) > h2::before {
