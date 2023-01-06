@@ -2,7 +2,7 @@
 :root {
     --bg-color: #FFFFFF;
     --overlay-color: rgba(0, 0, 0, 0.9);
-    --menu-speed: 0.9s;
+    --menu-speed: 1.1s;
 }
 
 /* Reset */
@@ -141,8 +141,8 @@ a {
   .menu-wrap .menu > div {
     background: var(--overlay-color);
     border-radius: 0;
-    width: 200vw;
-    height: 200vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex: none;
     align-items: center;
