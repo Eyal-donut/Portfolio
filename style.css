@@ -2,6 +2,7 @@
 :root {
     --bg-color: #FFFFFF;
     --content-sec-color:#808080;
+    --main-speed: 0.2s;
 }
 
 /* Reset */
@@ -10,8 +11,12 @@
     padding: 0;
     margin: 0;
     box-sizing:border-box;
-
+    
 }
+
+/* * {
+    outline: solid 1px red;
+} */
 html, body {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
@@ -19,34 +24,55 @@ html, body {
     width: 100vw;
     color: black;
     font-size: 62.5%;
-    letter-spacing: 0.4rem;
+    font-size: 1rem;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
     color: inherit;
 }
+p {
+    font-size: 1.7rem;
+}
 
 /* Utility Classes */
+h4 {
+    font-size: 1.3rem;
+    letter-spacing: 0.25rem;
+    font-weight:600;
+    line-height: 1.9rem;
+
+}
+h1, h2, h3  {
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+
+}
 
 h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;
     font-weight: 700;
+    margin: 1.8rem 0 1.8rem;
 }
 h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     line-height: 2.9rem;
     font-weight: 700;
+    margin:  0;
 }
 h3 {
     font-size: 1.4rem;
     line-height: 2.1rem;
     font-weight: 700;
 }
-h4 {
-    font-size: 1.3rem;
-    line-height: 1.9rem;
-    font-weight: 700;
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hero {
@@ -61,6 +87,7 @@ h4 {
 }
 .hero * {
     z-index: 1;
+
 }
 
 .hero::after {
@@ -71,11 +98,124 @@ h4 {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1));
-    /* opacity: 99.9%; */
     z-index: 0;
+}
+
+#after-hero.spacer {
+    height: 15vh;
+    width: 100vw;
+}
+#selected-projects-header.container {
+    height: 15vh;
+    width: 100vw;
+}
+
+
+.container.projects-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-evenly;
+    text-align:left;
+    /* background-color: bisque; */
+    width: 100vw;
+    height: 50vh;
+    transition: all var(--main-speed) ease-in-out;
+    border-top: 0.1rem solid black;
+    border-bottom: 0.1rem solid black;
 
 
 }
+
+.container.projects-container:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/Assets/images/background1.jfif) no-repeat center center/cover;
+    visibility: hidden;
+    z-index: -2;
+    transition: all var(--main-speed) ease-in-out;
+
+}
+.container.projects-container:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background: rgb(255, 255,255, 0.7);
+    z-index: -1;
+    transition: all var(--main-speed) ease-in-out;
+
+}
+
+.container.projects-container:hover > :first-child {
+    transform: translateX(3%);
+}
+
+.container.projects-container:hover:before, .container.projects-container:hover:after {
+    visibility: visible;
+}
+
+
+.container.projects-container > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align:left;
+    position: relative;
+    width: 90%;
+    height: 30vh;
+    flex: 0.5;
+    transition: all var(--main-speed) ease-in-out;
+    padding: 0 12%;
+    
+
+}  
+
+.container.projects-container > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 86%;
+    height: 10%;
+    flex:0.1;
+    background: url(/Assets/images/Arrow.svg) no-repeat center right;
+    
+}
+
+.container.projects-container > div:nth-child(1) > h2::before {
+    content: "01";
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    width: 12%;
+    height: 15%;
+    /* border: red 0.1rem solid; */
+    letter-spacing: 0.2rem;
+    
+}
+
+.container.projects-container > div:nth-child(1) > h2::after {
+    content:"";
+    position: absolute;
+    top: 5%;
+    left: -50%;
+    width: 50%;
+    height: 0.1rem;
+    background:black;
+}
+
 
 .bigdiv {
     background-color: #FFFFFF;
