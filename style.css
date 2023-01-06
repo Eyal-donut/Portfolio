@@ -2,7 +2,8 @@
 :root {
     --bg-color: #FFFFFF;
     --content-sec-color:#808080;
-    --main-speed: 0.2s;
+    --main-speed: 0.2s;    
+
 }
 
 /* Reset */
@@ -135,9 +136,8 @@ h3 {
     width: 100%;
     height: 100%;
     background: url(/Assets/images/background1.jfif) no-repeat center center/cover;
-    visibility: hidden;
     z-index: -2;
-    transition: all var(--main-speed) ease-in-out;
+    transition: all var(--sec-speed) ease-in-out;
 
 }
 .container.projects-container:after{
@@ -147,10 +147,9 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    visibility: hidden;
-    background: rgb(255, 255,255, 0.7);
+    background: rgb(255, 255, 255, 1);
     z-index: -1;
-    transition: all var(--main-speed) ease-in-out;
+    transition: all 0.5s ease-in-out;
 
 }
 
@@ -158,8 +157,12 @@ h3 {
     transform: translateX(3%);
 }
 
-.container.projects-container:hover:before, .container.projects-container:hover:after {
-    visibility: visible;
+
+
+.container.projects-container:hover:after{
+    background: rgb(255, 255,255, 0.7); 
+    /* opacity: 0.2;  */
+    z-index: -1; 
 }
 
 
