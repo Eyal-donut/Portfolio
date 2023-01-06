@@ -3,6 +3,7 @@
     --bg-color: #FFFFFF;
     --content-sec-color:#808080;
     --main-speed: 0.2s;
+    --sec-speed: 0.8s;
     --little-space:0.2rem;
     --underlined: underline black solid 0.1rem;    
 
@@ -132,7 +133,28 @@ h3 {
 
 i {
     width:21rem;
-    height:9.4rem;
+    height:8.4rem;
+    -webkit-filter: grayscale(100%);
+    padding-top: 11%;
+    opacity: 0.7;
+}
+
+.btn button {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    font-weight:700;
+    border: solid black 0.2rem;
+    background: #FFFFFF;
+    color: black;
+    transition: all var(--main-speed) ease-in-out;
+    width: 30rem;
+    height: 6rem;
+    border-radius: 0.5rem;
+}
+.btn button:hover {
+    
+    background: black;
+    color: #FFFFFF;
 }
 
 /* Hero */
@@ -168,10 +190,14 @@ i {
 }
 
 .subspacer1 {
-    height: 12vh;
+    height: 15vh;
     width: 100vw;
 }
 .subspacer2 {
+    height: 12vh;
+    width: 100vw;
+}
+.subspacer3 {
     height: 7vh;
     width: 100vw;
 }
@@ -312,7 +338,7 @@ i {
 
 
 #technologies-grid.grid-container {
-    height: 30vh;
+    height: 40vh;
     width: 90%;
     display: grid;
     grid-gap:1rem;
