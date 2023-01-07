@@ -15,12 +15,9 @@
     padding: 0;
     margin: 0;
     box-sizing:border-box;
-    
 }
 
-/* * {
-    outline: solid 1px red;
-} */
+
 html, body {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
@@ -34,6 +31,9 @@ html, body {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+}
+ul {    list-style: none;
 }
 p {
     font-size: 1.7rem;
@@ -42,7 +42,11 @@ p {
     font-weight: 100;
     color:#4c4b4b;
     margin-bottom:5vh;
-    width: 45.5rem;
+    width: auto;
+    max-width: 90%;
+    padding-left: 13%;
+    padding-right: 13%;
+
     text-align: center;
 }
 
@@ -74,7 +78,7 @@ h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;
     font-weight: 700;
-    margin: 1.8rem 0 1.8rem;
+    margin: 10rem 0 1.8rem;
 }
 h2 {
     font-size: 1.8rem;
@@ -102,6 +106,12 @@ h3 {
     align-items: center;
     flex-direction: column;
 }
+.row-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 
 .section-header-container.container {
     height: 15vh;
@@ -115,9 +125,11 @@ h3 {
     border-bottom: 0.1rem solid black;
 }
 
+
+
 .subsection-header-container.container {
     height: 10vh;
-    width: 100vw;
+    max-width: 100vw;
     margin: 2vh 0 0 0;
 }
 
@@ -126,9 +138,12 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    max-width: 100%;
     height: auto;
+}
 
+.section-container *p {
+    padding: 0 50%;
 }
 
 i {
@@ -136,7 +151,7 @@ i {
     height:8.4rem;
     -webkit-filter: grayscale(100%);
     padding-top: 11%;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .btn button {
@@ -185,12 +200,12 @@ i {
 }
 
 #after-hero.spacer {
-    height: 20vh;
+    height: 15vh;
     width: 100vw;
 }
 
 .subspacer1 {
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
 }
 .subspacer2 {
@@ -254,7 +269,7 @@ i {
 }
 
 .container.projects-container:hover > :first-child {
-    transform: translateX(3%);
+    transform: translateX(5%);
 }
 
 
@@ -305,7 +320,6 @@ i {
     left: 1%;
     width: 5%;
     height: 15%;
-    /* border: red 0.1rem solid; */
     letter-spacing: var(--little-space);
 }
 
@@ -332,20 +346,37 @@ i {
 }
 
 .container.projects-container:hover > div:first-child > h2::after  {
-    width: 8.5%;
-    left:-8.5%;
+    width: 10.5%;
+    left:-10.5%;
 }
 
 
 #technologies-grid.grid-container {
-    height: 40vh;
-    width: 90%;
+    position: relative;
+    height: 41vh;
+    width: 100%;
+    max-width: 690px;
     display: grid;
-    grid-gap:1rem;
+    grid-column-gap:1rem;
+    grid-row-gap:3rem;
+    margin-top: 1%;
+    padding: 1% 0;
     grid-template-areas:
     'html html css css js js'
     'react react react node node node';
 }
+
+#technologies-grid.grid-container:before {
+    content: "";
+    position:absolute;
+    background: #ececec;
+    width: 200vw;
+    height: 100%;
+    top: 0;
+    left:-50vw;
+
+}
+
 .html {
     grid-area:html;
     background: url(/Assets/images/html.png) no-repeat center center/cover;
@@ -381,3 +412,104 @@ i {
     -webkit-filter: grayscale(100%);
     opacity: 0.7;
 }
+
+/* Contact section */
+#contact-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 45vh;
+    width: 100vw;
+    background: black;
+    color: #FFFFFF;
+}
+
+.parent-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: 100%;
+}
+
+
+.parent-box * p {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-weight: 300;;
+    margin: 0;
+    margin-top: 0.5%;
+    padding: 0;
+    height: 5rem;
+    text-align: left;
+    width: auto;
+}
+
+.parent-box * p {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-weight: 300;;
+    margin: 0;
+    margin-top: 0.5%;
+    padding: 0;
+    height: 5rem;
+    text-align: left;
+    width: auto;
+}
+
+/* tageting the icons list */
+.parent-box > :nth-child(1) {
+    margin-bottom: 2rem;
+}
+
+/* tageting the links list */
+.parent-box > :nth-child(2) {
+    width: auto;
+    margin-left:3%;
+}
+
+.parent-box * i {
+    height: 60%;
+    width: 60%;
+    margin-bottom: 20%;
+    -webkit-filter: invert(100);
+    opacity: .9;
+
+}
+
+.parent-box * button {
+    cursor: pointer;
+    background: none;
+    border-radius: 50%;
+    margin: 0;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all var(--main-speed) ease-in-out;
+}
+
+.parent-box * button:hover {
+    background: #FFFFFF;
+}
+
+.parent-box * button:hover > i {
+    -webkit-filter: invert(0);
+}
+
+
+
+
+/* targeting the email address */
+.parent-box > :nth-child(2) > :first-child {
+margin-top: 2%;
+}
+
+/* targeting the linkedin address */
+.parent-box > :nth-child(2) > :nth-child(3) {
+    margin-bottom: .8%;
+}
+
+

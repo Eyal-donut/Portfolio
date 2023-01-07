@@ -1,0 +1,124 @@
+#contact-section-container.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 30vh;
+    background: black;
+    color: #FFFFFF;
+}
+
+
+/* .section-header-container.container {
+    height: 15vh;
+    width: 100vw;
+    margin: 4vh 0;
+    
+}*/
+#contact-details {
+    height: 15vh;
+    width: 50vw;
+    margin: 4vh 0;
+    border-bottom: 0.1rem solid #FFFFFF;
+    color: #FFFFFF;
+}
+.wrap-container {
+    max-width:50%;
+}
+
+#github {
+    width: fit-content;
+    height: fit-content;
+
+}
+#footer-container * i {
+    width: fit-content;
+    height: fit-content;
+    -webkit-filter: invert(0);
+    padding-bottom: 17%;
+    opacity: .9;
+}
+
+#footer-container * p {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-weight: 300;;
+}
+
+#github-container, #email-container, #linked-in-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+/* #footer-row-container.row-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+} */
+
+
+/* #contact-grid.container-grid {
+    position: relative;
+    height: 90%;
+    width: 50vw;
+    display: grid;
+    grid-column-gap:1rem;
+    grid-row-gap:3rem;
+    grid-template-areas:
+    'contact-details contact-details contact-details'
+    'linked-in github email';
+} */
+/* .contact-details {
+    grid-area:contact-details;
+    background-size: contain;
+    -webkit-filter: grayscale(0%);
+} */
+
+/* .github {
+    grid-area:github;
+    -webkit-filter: grayscale(0%);
+}
+.linked-in {
+    grid-area:linked-in;
+    -webkit-filter: grayscale(0%);
+}
+.email {
+    grid-area:email;
+    -webkit-filter: grayscale(0%);
+
+} */
+
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0.1rem;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+    
+
+    
+    .email { 
+        grid-area: 1 / 1 / 2 / 2;
+        
+    }
+    .email-add { grid-area: 1 / 2 / 2 / 3; }
+    .linkedin { grid-area: 2 / 1 / 3 / 2; }
+    .linkedin-add { grid-area: 2 / 2 / 3 / 3; }
+    .github { grid-area: 3 / 1 / 4 / 2; }
+    .github-add { grid-area: 3 / 2 / 4 / 3; }
