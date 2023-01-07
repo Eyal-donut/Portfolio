@@ -5,29 +5,6 @@
 }
 
 
-/* Reset */
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
-} */
-
-/* 
-html, body {
-    font-family:  'Josefin sans', Helvetica, sans-serif;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
-    color: black;
-    font-size: 62.5%;
-} */
-
-/* a {
-  text-decoration: none;
-  color: inherit;
-
-} */
-
 /* Hamburger Menu */
 .menu-wrap {
     position: fixed;
