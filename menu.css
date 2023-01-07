@@ -1,31 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300;400&family=Roboto+Mono&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300;400&family=Roboto+Mono&display=swap'); */
 :root {
-    --bg-color: #FFFFFF;
     --overlay-color: rgba(0, 0, 0, 0.9);
     --menu-speed: 1.1s;
 }
 
+
 /* Reset */
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing:border-box;
+} */
 
-}
+/* 
 html, body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family:  'Josefin sans', Helvetica, sans-serif;
     text-align: center;
     height: 100vh;
     width: 100vw;
     color: black;
     font-size: 62.5%;
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
   color: inherit;
 
-}
+} */
 
 /* Hamburger Menu */
 .menu-wrap {

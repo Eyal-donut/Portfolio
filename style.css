@@ -5,9 +5,11 @@
     --main-speed: 0.2s;
     --sec-speed: 0.8s;
     --little-space:0.2rem;
-    --underlined: underline black solid 0.1rem;    
-
+    --underlined: underline black solid 0.1rem;
+    font-size: 62.5%;
 }
+
+
 
 /* Reset */
 
@@ -24,7 +26,6 @@ html, body {
     height: 100vh;
     width: 100vw;
     color: black;
-    font-size: 62.5%;
     font-size: 1rem;
     overflow-x: hidden;
 }
@@ -43,7 +44,7 @@ p {
     color:#4c4b4b;
     margin-bottom:5vh;
     width: auto;
-    max-width: 90%;
+    max-width: 960px;
     padding-left: 13%;
     padding-right: 13%;
 
@@ -75,7 +76,7 @@ h1, h2, h3,h6  {
 }
 
 h1 {
-    font-size: 6.5rem;
+    font-size: 10rem;
     line-height: 6.5rem;
     font-weight: 700;
     margin: 10rem 0 1.8rem;
@@ -165,6 +166,8 @@ i {
     width: 30rem;
     height: 6rem;
     border-radius: 0.5rem;
+    font-family: inherit;
+    cursor: pointer;
 }
 .btn button:hover {
     
@@ -456,6 +459,7 @@ i {
     height: 5rem;
     text-align: left;
     width: auto;
+    min-width: 100%;
 }
 
 /* tageting the icons list */
@@ -512,4 +516,16 @@ margin-top: 2%;
     margin-bottom: .8%;
 }
 
+@media (min-width:660px) {
+    :root {
+        font-size: 68%;
+    }
+    
+}
 
+
+@media (min-width:960px) {
+    :root {
+        font-size: 72%;
+    }
+}
